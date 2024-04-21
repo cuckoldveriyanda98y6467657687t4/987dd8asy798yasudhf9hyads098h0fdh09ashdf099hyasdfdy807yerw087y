@@ -4,6 +4,13 @@ const cron = require('node-cron');
 
 const app = express();
 
+
+setInterval(() => {
+  console.log('Logging message every 29 seconds');
+}, 29000);
+
+
+
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
     service: 'outlook',

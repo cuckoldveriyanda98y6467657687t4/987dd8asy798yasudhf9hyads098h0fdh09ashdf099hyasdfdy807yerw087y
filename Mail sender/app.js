@@ -4,6 +4,18 @@ const cron = require('node-cron');
 require('dotenv').config();
 
 const app = express();
+setInterval(() => {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('en-US', { timeZone: 'UTC' });
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    console.log(timeString);
+    console.log(timeZone);
+    // Get the weekday
+    const dayOfWeekNumber = now.getDay();
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dayOfWeekName = daysOfWeek[dayOfWeekNumber];
+    console.log("Today is:", dayOfWeekName);
+}, 10000);
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({

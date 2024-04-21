@@ -5,14 +5,16 @@ require('dotenv').config();
 
 const app = express();
 
-const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-console.log(timeZone);
+
+
 
 
 setInterval(() => {
     const now = new Date();
     const timeString = now.toLocaleTimeString();
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     console.log(timeString);
+    console.log(timeZone);
   }, 10000);
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({

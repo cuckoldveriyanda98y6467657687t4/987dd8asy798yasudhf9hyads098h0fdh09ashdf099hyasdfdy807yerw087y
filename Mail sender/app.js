@@ -27,7 +27,7 @@ cron.schedule('0 */2 21-23 * * 6-7', () => {
 });
 
 // Sunday at 10:39 PM
-cron.schedule('40 22 * * 0', () => {
+cron.schedule('10 23 * * 0', () => {
     sendEmail('im cahh1ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 

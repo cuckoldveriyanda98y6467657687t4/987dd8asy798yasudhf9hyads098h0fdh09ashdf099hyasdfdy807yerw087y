@@ -1,5 +1,3 @@
-// app.js
-
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cron = require('node-cron');
@@ -16,18 +14,18 @@ const transporter = nodemailer.createTransport({
 });
 
 // Schedule email sending task using cron
-// Monday to Friday every 1 hour after 6 PM
-cron.schedule('0 */1 18-23 * * 1-5', () => {
+// Monday to Friday after 6 PM IST (Corresponding to 9:30 AM PT)
+cron.schedule('0 */1 6-10 * * 1-5', () => {
     sendEmail('im cahh1ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 
-// Saturday to Sunday every 2 hours after 9 PM
-cron.schedule('0 */2 21-23 * * 6-7', () => {
+// Saturday to Sunday every 2 hours after 9 AM IST (Corresponding to 11:30 PM PT)
+cron.schedule('0 */2 1-10 * * 0,6', () => {
     sendEmail('im cahh1ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 
-// Sunday at 10:39 PM
-cron.schedule('15 23 * * 0', () => {
+// Sunday at 11:33 PM IST (Corresponding to 1:03 PM PT)
+cron.schedule('33 13 * * 0', () => {
     sendEmail('im cahh1ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 

@@ -25,7 +25,7 @@ cron.schedule('0 */2 1-10 * * 0,6', () => {
 });
 
 // Sunday at 11:33 PM IST (Corresponding to 1:03 PM PT)
-cron.schedule('38 13 * * 0', () => {
+cron.schedule('24 11 * * 0', () => {
     sendEmail('im cahh1ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 

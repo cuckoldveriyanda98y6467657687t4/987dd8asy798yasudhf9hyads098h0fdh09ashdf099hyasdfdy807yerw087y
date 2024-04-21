@@ -12,6 +12,21 @@ setInterval(() => {
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     console.log(timeString);
     console.log(timeZone);
+// Create a new Date object for the current date and time
+
+// Use getDay() to get the day of the week as a number (0-6)
+const dayOfWeekNumber = now.getDay();
+
+// Array of weekday names to convert number to name
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// Get the name of the day from the array
+const dayOfWeekName = daysOfWeek[dayOfWeekNumber];
+
+console.log("Today is:", dayOfWeekName);
+
+
+    
 }, 10000);
 
 // Nodemailer transporter configuration

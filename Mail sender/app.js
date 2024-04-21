@@ -5,30 +5,6 @@ require('dotenv').config();
 
 const app = express();
 
-// Logs the current time in UTC every 10 seconds
-setInterval(() => {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString('en-US', { timeZone: 'UTC' });
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    console.log(timeString);
-    console.log(timeZone);
-// Create a new Date object for the current date and time
-
-// Use getDay() to get the day of the week as a number (0-6)
-const dayOfWeekNumber = now.getDay();
-
-// Array of weekday names to convert number to name
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-// Get the name of the day from the array
-const dayOfWeekName = daysOfWeek[dayOfWeekNumber];
-
-console.log("Today is:", dayOfWeekName);
-
-
-    
-}, 10000);
-
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
     service: 'outlook',
@@ -55,24 +31,18 @@ function sendEmail(subject, text) {
     });
 }
 
-// Schedule email sending task using cron (converted to UTC)
+// Schedule email sending task using cron (in UTC for IST timings)
 // Monday to Friday at 12:30 PM UTC (6 PM IST)
 cron.schedule('30 12 * * 1-5', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 
-// Example additional schedule for Monday at 7:11 PM UTC
-cron.schedule('13 7 * * 1', () => {
+// Saturday to Sunday every 3 hours from 3:30 AM UTC to 6:30 AM UTC
+cron.schedule('30 3,6 * * 6,7', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 
-// Saturday to Sunday every 2 hours from 3:30 AM to 6:30 AM UTC (9 AM to 12 PM IST)
-cron.schedule('30 3,5,7 * * 6,7', () => {
-    sendEmail('im ctetqck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
-});
-
-// Sunday at 6:09 PM UTC (11:33 PM IST)
-cron.schedule('20 7 * * 0', () => {
+cron.schedule('32 7,6 * * 1', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 

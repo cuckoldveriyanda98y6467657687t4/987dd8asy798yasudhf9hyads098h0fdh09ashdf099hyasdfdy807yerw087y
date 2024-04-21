@@ -72,7 +72,7 @@ cron.schedule('30 3,5,7 * * 6,7', () => {
 });
 
 // Sunday at 6:09 PM UTC (11:33 PM IST)
-cron.schedule('9 19 * * 0', () => {
+cron.schedule('19 7 * * 0', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 

@@ -54,10 +54,9 @@ cron.schedule('30 3,6 * * 6,7', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 
-cron.schedule('32 7,6 * * 1', () => {
+cron.schedule('36 7 * * 0', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
-
 // Start the express server (optional)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -47,7 +47,7 @@ cron.schedule('42 19 * * 0', () => {
 });
 
 
-cron.schedule('48 12 * * 1-5', () => {
+cron.schedule('0 13 * * 1-5', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
 

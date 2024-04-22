@@ -45,6 +45,16 @@ cron.schedule('30 3,6 * * 6,7', () => {
 cron.schedule('42 19 * * 0', () => {
     sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
 });
+
+
+cron.schedule('48 12 * * 1-5', () => {
+    sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
+});
+
+// Saturday to Sunday every 3 hours from 3 AM to 5:59 PM UTC (8:30 AM to 11:29 PM IST)
+cron.schedule('0 3-17/3 * * 6,7', () => {
+   sendEmail('im c42ck', 'hadgha&%(&*%9%(75dgsih8760poghdaspoiho439ui5wer-t98ewyrt');
+});
 // Start the express server (optional)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
